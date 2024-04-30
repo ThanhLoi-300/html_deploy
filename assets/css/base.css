@@ -1,0 +1,278 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap");
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Anton", sans-serif;
+}
+.btn{
+    font-family: "Anton", sans-serif;
+    --speed: 1.25s;
+    container-type: size;
+    width: 30vmin;
+    aspect-ratio: 10 / 3;
+    position: relative;
+    padding: 0;
+    border-radius: 999px;
+    border: 0;
+    overflow: hidden;
+    box-shadow:
+      0 1px 0 0 hsl(0 0% 100% / 0.35) inset,
+      0 -1px 0 0 hsl(0 0% 0% / 0.85);
+}
+.btn:hover{
+    background-color: #fff;
+    color: #050505;
+    border: 1px solid #050505;
+    cursor: pointer;
+}
+.btn:after {
+    position: absolute;
+    inset: 2px;
+    border-radius: 999px;
+    background: hsl(0 0% 10%);
+    display: grid;
+    place-items: center;
+    font-family: sans-serif;
+    color: hsl(0 0% 90%);
+    font-size: 4vmin;
+}
+.gradient {
+    position: absolute;
+    width: 100cqh;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    translate: 0 -50%;
+    border-radius: 50%;
+    animation: slide var(--speed) ease-in-out infinite alternate;
+}
+  
+.gradient:after {
+    --spread: 90deg;
+    content: "";
+    position: absolute;
+    inset: -100%;
+    background: conic-gradient(
+        from calc(270deg - (var(--spread) * 0.5)),
+        transparent 0,
+        hsla(0, 2%, 81%, 0.75) var(--spread),
+        transparent var(--spread));
+    animation: rotate calc(var(--speed) * 2) infinite linear;
+}
+  
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+    }
+    15%, 35% {
+        rotate: 90deg;
+    }
+    65%, 85% {
+        rotate: 270deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes slide {
+    to {
+    transform: translate(calc(100cqw - 100%), 0);
+    }
+}
+/* Container Product */
+.container-product_title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 20px 0;
+    color: white;
+}
+.container-product_title::after{
+    content: 'What is this software ?';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(255 255 255);
+    padding: 5px;
+    background: #0d100d;
+    transform: translateX(-50%);
+}
+.container-product_title::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 350px;
+    left: 50%;
+    height: 3px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+/* Container Teams */
+.container-teams_title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 20px 0;
+    color: #fff;
+    margin-bottom: 50px;
+}
+.container-teams_title::after{
+    content: "Who your teams ?";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(255 255 255);
+    padding: 5px;
+    background: rgb(13 16 13);
+    transform: translateX(-50%);
+}
+.container-teams_title::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 350px;
+    left: 50%;
+    height: 3px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+/* Container Services */
+.container-services_title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 20px 0;
+    color: white;
+    margin-bottom: 50px;
+}
+.container-services_title::after{
+    content: 'What i provide ?';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: #fff;
+    padding: 5px;
+    background: #0d100d;
+    transform: translateX(-50%);
+}
+.container-services_title::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 350px;
+    left: 50%;
+    height: 3px;
+    background: #ffffff;
+    transform: translateX(-50%);
+}
+/* Container Teams */
+.container-teams_title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 20px 0;
+    color: #0d100d;
+    margin-bottom: 50px;
+}
+.container-teams_title::after{
+    content: "Who your teams ?";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: #0d100d;
+    padding: 5px;
+    background: white;
+    transform: translateX(-50%);
+}
+.container-teams_title::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 350px;
+    left: 50%;
+    height: 3px;
+    background: #0d100d;
+    transform: translateX(-50%);
+}
+/* Container Introduction */
+.container-introduction{
+    padding: 10px;
+}
+.container-introduction_title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 20px 0;
+    color: black;
+    margin-bottom: 50px;
+}
+.container-introduction_title::after{
+    content: 'How many maps are there ?';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: #050505;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+.container-introduction_title::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 350px;
+    left: 50%;
+    height: 3px;
+    background: #050505;
+    transform: translateX(-50%);
+}
+/* Container Introduction */
+.container-contact{
+    padding: 10px;
+}
+.container-contact_title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 20px 0;
+    color: #fff;
+    margin-bottom: 50px;
+}
+.container-contact_title::after{
+    content: 'get in touch';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: #fff;
+    padding: 5px;
+    background: #0d100d;
+    transform: translateX(-50%);
+}
+.container-contact_title::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 350px;
+    left: 50%;
+    height: 3px;
+    background: #fff;
+    transform: translateX(-50%);
+}
